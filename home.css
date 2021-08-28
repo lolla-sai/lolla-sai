@@ -109,7 +109,7 @@ div.right li::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: clamp(400px, 100vh, 4000px);
+    min-height: clamp(400px, 100vh, 4000px);
 }
 .landing-text {
     margin-right: clamp(10px, 5vw, 90px);
@@ -204,6 +204,12 @@ button.btn1 {
     margin: 20px;
     padding: 15px;
 }
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    max-width: 100%;
+}
 .card p {
     color: rgb(29, 26, 26);
     font-size: 1rem;
@@ -217,21 +223,6 @@ button.btn1 {
     /* color: white; */
     font-family: 'Constantia', 'Lucida Calligraphy', 'Calibri', Arial, sans-serif;
     font-size: 1.4rem;
-}
-.btn2 {
-    background: white;
-    display: block;
-    display: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    margin: 25px auto;
-    border: 3px solid black;
-    border-radius: 5px;
-    transition: background .5s, color .5s;
-}
-.btn2:hover {
-    background: black;
-    color: white;
 }
 span.coloredText {
     color:rgb(245, 140, 36);
@@ -453,11 +444,11 @@ footer {
         margin: 5vh 0;
     }
     .landing {
-        padding: 10px;
+        padding: 20px 10px;
         flex-direction: column-reverse;
     }
     .landing-image {
-        width: 60%;
+        width: 100%;
     }
     .landing-text {
         margin: 0;
