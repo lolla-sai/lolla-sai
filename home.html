@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sai Lolla">
+
+        <title>Sai Lolla - Portfolio</title>
+        <link rel="stylesheet" href="home.css">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
+
+        <script src="./home.js" defer></script>
+
+    </head>
+    <body>
+        <div class="mask"></div>
+        <nav>
+            <h1>Personal Portfolio</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Projects</a></li>
+                <div class="right">
+                    <li><a href="#contact">Contact Me</a></li>
+                </div>
+            </ul>
+            <button class="toggleBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <section class="landing sect sect2">
+            <div class="landing-text">
+                <h2>Hi, I Am <br><span class="coloredText">Sai Lolla</span></h2>
+                <p>I am a Web Developer, with keen interest in CSS. I also love Programming...</p>
+                <button class="btn1">Hire Me!</button>
+            </div>
+            <div class="landing-image">
+                <img src="assets/Frametest.svg" alt="landing img">
+                <img class="star" id="star1" src="./assets/glowing-star.png" alt="glowing star1">
+                <img class="star" id="star2" src="assets/star2.png" alt="glowing star2">
+                <img class="star" id="star3" src="assets/star3.png" alt="glowing star3">
+                <img class="star" id="star4" src="assets/star4.png" alt="glowing star4">
+            </div>
+        </section>
+        <section class="sect sect2">
+            <h2>I <span class="coloredText">do</span>...</h2>
+            <p>Everything starting from frontend to backend. I like tinkering with new technologies. I am also an ardent devotee of python. I have done many projects in python and Django. If any of this sounds interesting to you, just ping me!!:)</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Designing</h3>
+                    <p>I love designing UIs. My tool of trade is Figma. I personally design most of my projects</p>
+                    <button class="btn2">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Development</h3>
+                    <p>I am a developer too! I know C, C++, JS, Python. I have used many packages in python to build my projects too. I use django, a web framework with high security, as my backend.</p>
+                    <button class="btn2">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Reading</h3>
+                    <p>Apart from this, I read a lot.. In the past, I have even written articles for newspapers. This hobby of mine has given me good communication skills.</p>
+                    <button class="btn2">Learn More</button>
+                </div>
+            </div>
+            <button class="btn1">Download CV</button>
+        </section>
+        <!-- Next section for education and skills -->
+        <section class="sect sect2" id="education">
+            <h2>My <span class="coloredText">education...</span></h2>
+            <div class="carousal">
+                <div class="slide">
+                    <img src="assets/gec.jpg" alt="GEC">
+                    <div>
+                        <h3>Bachelor Of Engineering</h3>
+                        <span>Goa College Of Engineering</span>
+                        <span>2019-23</span>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/School_image.jpg" alt="Shree Damodar">
+                    <div>
+                        <h3>Higher Secondary Education</h3>
+                        <span>Shree Damodar Higher Secondary School Of Science</span>
+                        <span>2017-19</span>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/School_image.jpg" alt="Shree Damodar">
+                    <div>
+                        <h3>High School Education</h3>
+                        <span>Shree Damodar Vidhyalaya English High School</span>
+                        <span>2010-17</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sect sect2" id="SandAch">
+            <h2>I am <span class="coloredText">skilled in...</span></h2>
+            <p>I am a continuous learner. I never get bored watching and doing tech. In this journey as a computer science engineer, I have mastered quite a few skills...</p>
+            <div class="skills">
+                <div class="skill">
+                    <img src="assets/pythonIcon.png" alt="Python Icon">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="assets/django-logo-negative.png" alt="Django Icon">
+                    <p>Django</p>
+                </div>
+                <div class="skill">
+                    <img src="assets/c++.png" alt="C++ Icon">
+                    <p>C++ Icon</p>
+                </div>
+                <div class="skill">
+                    <img src="assets/js.png" alt="JS Icon">
+                    <p>JS</p>
+                </div>
+                <div class="skill">
+                    <img src="assets/htmlandcss.png" alt="HTML and CSS Icon">
+                    <p>HTML and CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="assets/andmanymore.png" alt="and many more">
+                    <p>And Many more...</p>
+                </div>
+            </div>
+            <h3 class="subheader">Certifications</h3>
+            <div class="certi">
+                <div>
+                    <img src="assets/0001.jpg" alt="Inspirus2k20">
+                </div>
+                <div>
+                    <img src="assets/joc.jpg" alt="Joy Of Computing Python">
+                </div>
+                <div>
+                    <img src="assets/pdsap.jpg" alt="Joy Of Computing Python">
+                </div>
+            </div>
+        </section>
+        <section class="sect sect2" id="projects">
+            <h2>Few Of <span class="coloredText">my Projects</span></h2>
+            <p>I have many projects to show you. Let me tell you, I am currently learning Git and Github. I havent uploaded most of my codes/projects yet. So I have listed only a few here.</p>
+            <div class="projects">
+                <div class="proj shine">
+                    <img src="assets/pygame.png" alt="pygameIcon">
+                    <p>Built a 2D game using pygame module in python. Called RoboWars, it has 3 levels, where two opponent robots fight against each other. Click for more!!!</p>
+                </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="social">
+                <h2>Sai Lolla</h2>
+                <ul class="links">
+                    <li><a target="_blank" href="https://github.com/" class="github">Github</a></li><!--
+                    --><li><a target="_blank" href="https://instagram.com/" class="instagram">Instagram</a></li><!--
+                    --><li><a target="_blank" href="https://linkedin.com/" class="linkedin">LinkedIn</a></li><!--
+                    --><li><a target="_blank" href="https://mail.google.com/" class="gmail">Gmail</a></li><!--
+                --><li><a target="_blank" href="https://www.twitter.com/" class="twitter">Twitter</a></li>
+                </ul>
+            </div>
+            <div>Get latest news from me</div>
+            <div class="searchbar">
+                <input type="email" name="searchkey" id="searchkey" placeholder="Email">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div>
+                <input type="checkbox" name="accept" id="accept">
+                By pressing subscribe, you agree that you have read all the rules and accept to abide by them.
+            </div>
+            <div class="cpyright">&copy; 2021</div>
+            <div class="privacy">Your privacy is important to us.<br>Read our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> here.</div>
+        </footer>
+    </body>
+</html>
