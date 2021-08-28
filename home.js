@@ -16,7 +16,7 @@ let observer = new IntersectionObserver((entries, observer) => {
     })
 }, options);
 
-observer.observe(document.querySelector('.landing'));
+observer.observe(document.querySelector('.landing-image'));
 
 let toggleBtn = document.querySelector('.toggleBtn');
 let ul = document.querySelector('nav>ul');
