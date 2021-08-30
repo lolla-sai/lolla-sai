@@ -88,6 +88,7 @@ div.right li::after {
     width: 25px;
     display: block;
     border: 2px solid black;
+    background: black;
     margin: 3px 0;
 }
 
@@ -228,7 +229,7 @@ span.coloredText {
     color:rgb(245, 140, 36);
 }
 
-.carousal {
+.placesOfEducation {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -408,7 +409,7 @@ footer {
     font-size: 1.1rem;
     color: white;
     background: transparent;
-    border: 3px solid green;
+    border: 3px solid aqua;
     padding: 5px 10px;
 }
 .searchbar>button {
@@ -438,8 +439,70 @@ footer {
     bottom: 0;
 }
 
+/* Carousal CSS */
+.carousal {
+    position: relative;
+    height: 400px;
+    overflow-x: hidden;
+    margin: 20px;
+    /* box-shadow: inset 0 0 34px black; */
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    left: 0;
+    transition: left .5s;
+}
+.page img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+    /* filter: drop-shadow(20px 0px 50px black); */
+    /* box-shadow: 10px 10px 20px -20px black; */
+}
+.active {
+    display: block;
+}
+.prev {
+    display: block;
+    left: -100%;
+}
+.next {
+    display: block;
+    left: 100%;
+}
+.control-btn {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: orange;
+    user-select: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.19);
+}
+.left-btn {
+    left: 0;
+}
+.right-btn {
+    right: 0;
+}
+
 /* Responsive */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 548px) {
     section:not(.landing) {
         margin: 5vh 0;
     }
@@ -485,6 +548,10 @@ footer {
     .landing-text h2 {
         text-align: center;
     }
+    .social ul a {
+        font-size: 0.8rem;
+        padding-top: 30px;
+    }
     .skills {
         justify-content: center;
     }
@@ -496,8 +563,18 @@ footer {
     .searchbar>input {
         flex-grow: 1;
     }
+    .carousal {
+        height: 300px;
+    }
     .slide {
         flex-direction: column;
         aspect-ratio: initial;
+    }
+    .control-btn {
+        margin: 0 5px;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2rem;
+        font-weight: 800;
     }
 }
