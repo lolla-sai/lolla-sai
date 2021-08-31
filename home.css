@@ -29,7 +29,7 @@ nav {
     transition: box-shadow 0.4s, color 0.4s;
 }
 nav h1 {
-    font-family: 'Dubai';
+    font-family: 'Dubai', serif;
     flex-grow: 1;
     margin-left: clamp(5px, 3vw, 30px);
 }
@@ -42,9 +42,9 @@ nav ul {
     align-items: center;
 }
 nav a {
+    display: block;
     text-decoration: none;
     color: black;
-    display: block;
     padding: 5px 10px;
 }
 nav a:hover {
@@ -61,22 +61,9 @@ div.right > li {
     border-radius: 15px;
     padding: 7px 14px;
     background: linear-gradient(180deg, rgb(245, 140, 36), rgb(247, 129, 37));
-    position: relative;
 }
 div.right li>a {
     color: white;
-}
-div.right li::after {
-    /* content: ''; */
-    position: absolute;
-    background-color: orange;
-    top: 0%;
-    left: 50%;
-    z-index: -1;
-    transform: translateX(-50%);
-    /* filter: blur(25px); */
-    width: 100%;
-    height: 100%;
 }
 .toggleBtn {
     display: none;
@@ -86,31 +73,37 @@ div.right li::after {
 }
 .toggleBtn span {
     width: 25px;
+    height: 4px;
     display: block;
-    border: 2px solid black;
     background: black;
     margin: 3px 0;
 }
 
 /* Main page */
-.sect2 {
-    min-height: 100vh;
-}
+
 .sect {
-    padding: 0 clamp(5px, 3vw, 30px);
+    --bgcolor: white;
+    --color: black;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background-color: var(--bgcolor);
+    color: var(--color);
 }
 .sect>p {
     font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: 1.25rem;
+    font-weight: 300;
 }
 .sect>h2 {
     font-size: clamp(1.8rem, 4vw, 4rem);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
 }
 .landing {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: clamp(400px, 100vh, 4000px);
+    min-height: 100vh;
 }
 .landing-text {
     margin-right: clamp(10px, 5vw, 90px);
@@ -119,11 +112,11 @@ div.right li::after {
     font-family: 'Trebuchet MS', 'Lucida Calligraphy', serif;
     font-size: clamp(2rem, 6vw, 6rem);
     margin-bottom: 10px;
-    /* font-size: 3rem; */
 }
 .landing-text p {
     font-family: 'bahnschrift', 'Calibri', 'Arial', sans-serif;
-    /* margin-bottom: 10px; */
+    font-size: 1.25rem;
+    font-weight: 300;
 }
 button.btn1 {
     border: none;
@@ -131,8 +124,7 @@ button.btn1 {
     color: white;
     border-radius: 15px;
     padding: 7px 14px;
-    margin-top: 15px;
-    /* background: linear-gradient(180deg, gold, orange); */
+    margin: 15px 0;
     background: linear-gradient(180deg, rgb(245, 140, 36), rgb(247, 129, 37));
     cursor: pointer;
 }
@@ -143,11 +135,12 @@ button.btn1 {
     max-width: 400px;
     position: relative;
 }
-.landing-image > img:not(.star) {
+.landing-image > img:first-child {
     display: block;
     width: 100%;
     height: auto;
 }
+/* pseudo element to cover up the line on top */
 .landing-image::after {
     content: '';
     position: absolute;
@@ -157,35 +150,20 @@ button.btn1 {
     height: 3px;
     background: white;
 }
+/* stars in dp */
 .star {
     position: absolute;
     transform: translate(-50%, -50%);
     object-fit: contain;
     width: var(--x);
 }
-#star1 {
-    --x: 20%;
-    top: 60%;
-    left: 5%;
-    transform: rotate(-180deg) translateY(-50%);
-}
-#star2 {
-    --x: 15%;
-    top: 30%;
-    left: 90%;
-}
-#star3 {
-    --x: 15%;
-    top: 80%;
-    left: 80%;
-}
-#star4 {
-    --x: 15%;
-    top: 40%;
-    left: 10%;
-}
+#star1 {--x: 20%; top: 60%; left: 5%; transform: rotate(-180deg) translateY(-50%);}
+#star2 { --x: 15%; top: 30%; left: 90%; }
+#star3 { --x: 15%; top: 80%; left: 80%; }
+#star4 { --x: 15%; top: 40%; left: 10%; }
 
 /* cards */
+/* cards showing what I do... */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -225,13 +203,12 @@ button.btn1 {
     font-family: 'Constantia', 'Lucida Calligraphy', 'Calibri', Arial, sans-serif;
     font-size: 1.4rem;
 }
-span.coloredText {
-    color:rgb(245, 140, 36);
-}
+span.coloredText { color:rgb(245, 140, 36); }
 
 .placesOfEducation {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -244,12 +221,13 @@ span.coloredText {
     align-items: center;
 
     text-align: center;
-    padding: clamp(10px, 2vw, 2rem);
+    padding: 30px clamp(10px, 2vw, 2rem);
     width: 80%;
     border-radius: 10px;
     max-width: 500px;
-    border: 3px solid black;
-    margin: 10px 0;
+    /* border: 3px solid black; */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.19),
+                -4px -4px 15px rgba(0, 0, 0, 0.19);
 }
 .slide img {
     display: block;
@@ -257,7 +235,7 @@ span.coloredText {
     width: 150px;
     height: 150px;
     object-fit: fill;
-    border-radius: 7px;
+    border-radius: 50%;
 }
 .slide div {
     flex-grow: 1;
@@ -291,17 +269,32 @@ span.coloredText {
 /* skills and acheivements */
 .skills {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
 }
-.proj, .skill {
+.skills p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.skills>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+.proj {
     max-width: 300px;
     flex-grow: 1;
     padding: 10px;
     margin: 1rem;
     border: 3px solid black;
+    color: black;
     border-radius: 7px;
+    background:rgb(248, 249, 250);
 }
-.proj img, .skill img {
+.proj img {
     display: block;
     width: 150px;
     height: 150px;
@@ -316,7 +309,7 @@ span.coloredText {
     font-size: 1.1rem;
     font-style: oblique;
 } */
-.proj p, .skill p {
+.proj p {
     text-align: center;
     font-size: 1.1rem;
     font-style: oblique;
@@ -501,10 +494,18 @@ footer {
     right: 0;
 }
 
+/* apply dark theme for even children */
+section:nth-of-type(even) {
+    --bgcolor: rgb(33, 37, 41);
+    --color: rgb(248, 249, 250);
+}
+section:nth-of-type(even) button {
+    margin-bottom: 20px;
+}
 /* Responsive */
 @media screen and (max-width: 548px) {
     section:not(.landing) {
-        margin: 5vh 0;
+        margin: 10px 0;
     }
     .landing {
         padding: 20px 10px;
@@ -553,7 +554,8 @@ footer {
         padding-top: 30px;
     }
     .skills {
-        justify-content: center;
+        flex-direction: column-reverse;
+        /* flex-wrap: wrap; */
     }
     .searchbar {
         width: 90vw;
@@ -569,6 +571,7 @@ footer {
     .slide {
         flex-direction: column;
         aspect-ratio: initial;
+        margin: 20px 0;
     }
     .control-btn {
         margin: 0 5px;
@@ -576,5 +579,8 @@ footer {
         height: 2.5rem;
         font-size: 2rem;
         font-weight: 800;
+    }
+    .sect>h2 {
+        margin-top: 20px;
     }
 }
