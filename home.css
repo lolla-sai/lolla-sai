@@ -494,6 +494,11 @@ footer {
     right: 0;
 }
 
+
+#SandAch > div.skills > img {
+    max-width: 50%;
+}
+
 /* apply dark theme for even children */
 section:nth-of-type(even) {
     --bgcolor: rgb(33, 37, 41);
@@ -582,5 +587,8 @@ section:nth-of-type(even) button {
     }
     .sect>h2 {
         margin-top: 20px;
+    }
+    #SandAch > div.skills > img {
+        max-width: 100%;
     }
 }
